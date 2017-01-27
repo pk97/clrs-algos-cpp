@@ -34,7 +34,7 @@ int main()
                 sum += v[j];
             }
             if (sum > curr_max_sum) {
-                curr_max_sum = sum;
+                curr_max_sum = sum; 
                 curr_start_index = start;
                 curr_end_index = end - 1;
             }
