@@ -41,7 +41,7 @@ int main()
         }
     }
 
-    //Displaying Results
+    //Displaying Results 
     cout << "\nSum of maximum subarray:" << curr_max_sum;
     cout << "\nMaximum subarray:\n";
     for (int i = curr_start_index; i <= curr_end_index; i++)
