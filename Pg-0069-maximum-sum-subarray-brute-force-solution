@@ -7,7 +7,7 @@ Author  :Sharat Sachin
 
 #include <iostream>
 #include <climits>
-#include <vector>
+ #include <vector>
 using namespace ::std;
 int main()
 {
@@ -28,15 +28,17 @@ int main()
     //Calculating the solution
     int curr_max_sum = INT_MIN, curr_start_index = 0, curr_end_index = 0;
     for (int start = 0; start < size; start++) {
-        for (end = start + 1; end <= size; end++) {
+        for (int end = start + 1; end < size; end++) {
             int sum = 0;
-            for (int j = start; j < end; j++) {
+            //Calculating sum of elements from start to end inclusive
+            for (int j = start; j <= end; j++) {
                 sum += v[j];
             }
+            //Checking if latest value of sum is more than current max value
             if (sum > curr_max_sum) {
                 curr_max_sum = sum; 
                 curr_start_index = start;
-                curr_end_index = end - 1;
+                curr_end_index = end;
             }
         }
     }
